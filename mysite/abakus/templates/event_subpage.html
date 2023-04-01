@@ -1,0 +1,35 @@
+{% load static %}
+<!--{% load bootstrap5 %}-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Содержание</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="fon">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-fiol">
+      <div class="container-fluid">
+       <a class="navbar-brand fs-2" href="{% url 'event_list' %}">ONLY.EVENTS</a>
+        <div>
+          <a
+            class="navbar-brand fs-4"
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            >LOG IN</a>
+        </div>
+      </div>
+    </nav>
+    <h1 align="center">{{ event.title }}</h1>
+    <div id="block2">
+      <img src="../../{{ event.content1 }}" width="600" height="400" />
+    </div>
+    <p style="white-space: pre-line" align="center">{{ event.description1 }}</p>
+  </body>
+</html>
